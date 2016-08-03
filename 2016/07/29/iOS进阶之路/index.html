@@ -5,16 +5,25 @@
   
   <title>iOS进阶之路 | iOS进阶</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="iOS成长之旅">
+  <meta name="description" content="网络数据请求
+http://www.baidu.com?city=beijing&amp;amp;weather=    ?前面部分被称为请求头  ？后面的部分被称为请求体    请求体由参数和参数值组成 多个参数之间用&amp;amp;连接
+
+按照接口划分：如果接口是完整（包括请求头和请求体两部分）  这种数据请求 我们就使用GET方式请求数据  GET方式请求数据非常简单 但是不安全 请求数据的信息都在接口的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS进阶之路">
 <meta property="og:url" content="http://yoursite.com/2016/07/29/iOS进阶之路/index.html">
 <meta property="og:site_name" content="iOS进阶">
-<meta property="og:description" content="iOS成长之旅">
-<meta property="og:updated_time" content="2016-07-29T07:09:27.000Z">
+<meta property="og:description" content="网络数据请求
+http://www.baidu.com?city=beijing&amp;amp;weather=    ?前面部分被称为请求头  ？后面的部分被称为请求体    请求体由参数和参数值组成 多个参数之间用&amp;amp;连接
+
+按照接口划分：如果接口是完整（包括请求头和请求体两部分）  这种数据请求 我们就使用GET方式请求数据  GET方式请求数据非常简单 但是不安全 请求数据的信息都在接口的">
+<meta property="og:updated_time" content="2016-08-02T07:42:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS进阶之路">
-<meta name="twitter:description" content="iOS成长之旅">
+<meta name="twitter:description" content="网络数据请求
+http://www.baidu.com?city=beijing&amp;amp;weather=    ?前面部分被称为请求头  ？后面的部分被称为请求体    请求体由参数和参数值组成 多个参数之间用&amp;amp;连接
+
+按照接口划分：如果接口是完整（包括请求头和请求体两部分）  这种数据请求 我们就使用GET方式请求数据  GET方式请求数据非常简单 但是不安全 请求数据的信息都在接口的">
   
     <link rel="alternative" href="/atom.xml" title="iOS进阶" type="application/atom+xml">
   
@@ -281,7 +290,27 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <h1 id="网络数据请求"><a href="#网络数据请求" class="headerlink" title="网络数据请求"></a>网络数据请求</h1><blockquote>
+<p><a href="http://www.baidu.com?city=beijing&amp;weather=" target="_blank" rel="external">http://www.baidu.com?city=beijing&amp;weather=</a><br>    ?前面部分被称为请求头  ？后面的部分被称为请求体<br>    请求体由参数和参数值组成 多个参数之间用&amp;连接</p>
+<ul>
+<li>按照接口划分：<br>如果接口是完整（包括请求头和请求体两部分）<br>  这种数据请求 我们就使用GET方式请求数据<br>  GET方式请求数据非常简单 但是不安全 请求数据的信息都在接口的请求体位置裸露出来 所以不安全<br>  如果接口不完整（只有请求头 没有请求体）<br>  这种数据请求的方式 我们就使用POST方式请求数据<br>  POST方式请求数据 相对来说复杂一些 请求体需要写代码手动拼接<br>  POST请求数据的方式经常用于登录、注册、文件的上传</li>
+<li>按照请求数据的样式划分:<blockquote>
+<ul>
+<li>同步请求:多个请求对象向服务器请求数据 服务器会将多个对象放在队列中 一个对象开始请求数据 其他对象在队列中等待 如果第一个对象请求数据结束以后 第二个对象才能开始请求数据 即使对象请求数据结束也要在队列中等待 等待所有对象全部请求数据完成 服务器才将所有对象请求的数据反馈给UI 所有用户体验非常不好 经常出现白屏获取卡顿 (也就是影响了UI主线程的工作)</li>
+<li>异步请求:多个对象请求数据 也是将多个对象放在队列中 多个对象同时请求数据 谁先请求数据完成 就将数据反馈给UI 无需等待其他对象完成数据请求<br>iOS开发中用到的数据请求都是异步请求 异步请求能够提高CPU的利用率</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p>真正开发中和数据有关的就是下面的4步</p>
+<ul>
+<li>数据请求</li>
+<li>将请求下来的数据进行解析</li>
+<li>将解析好的数据显示在UI上</li>
+<li>将UI上的数据进行持久性存储</li>
+</ul>
+</blockquote>
+
       
     </div>
     
@@ -292,7 +321,7 @@
         <p><span>本文标题:</span><a href="/2016/07/29/iOS进阶之路/">iOS进阶之路</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 GH Leader 的个人博客">GH Leader</a></p>
         <p><span>发布时间:</span>2016年07月29日 - 15时09分</p>
-        <p><span>最后更新:</span>2016年07月29日 - 15时09分</p>
+        <p><span>最后更新:</span>2016年08月02日 - 15时42分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/07/29/iOS进阶之路/" title="iOS进阶之路">http://yoursite.com/2016/07/29/iOS进阶之路/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/07/29/iOS进阶之路/　　作者: GH Leader" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -306,31 +335,12 @@
 
 
 
-<nav id="article-nav">
-  
-    <a href="/2016/07/29/kljklkj/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          kljklkj
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/07/29/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
-
   
 </article>
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#网络数据请求"><span class="toc-number">1.</span> <span class="toc-text">网络数据请求</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -401,18 +411,14 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/07/29/kljklkj/" title="上一篇: kljklkj">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/07/29/hello-world/" title="下一篇: Hello World">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/07/29/kljklkj/">kljklkj</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/29/iOS进阶之路/">iOS进阶之路</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/29/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/07/29/iOS进阶之路/">iOS进阶之路</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");

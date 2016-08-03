@@ -3,25 +3,9 @@
 
 
     
-    
-  <url>
-    <loc>http://yoursite.com/2016/07/29/kljklkj/</loc>
-    <lastmod>2016-07-29T07:13:27.000Z</lastmod>
-    <data>
-        <display>
-        <title>kljklkj</title>
-        <pubTime>2016-07-29T07:13:27.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
   <url>
     <loc>http://yoursite.com/2016/07/29/iOS%E8%BF%9B%E9%98%B6%E4%B9%8B%E8%B7%AF/</loc>
-    <lastmod>2016-07-29T07:09:27.000Z</lastmod>
+    <lastmod>2016-08-02T07:42:28.000Z</lastmod>
     <data>
         <display>
         <title>iOS进阶之路</title>
@@ -34,18 +18,4 @@
     </url>
 
     
-  <url>
-    <loc>http://yoursite.com/2016/07/29/hello-world/</loc>
-    <lastmod>2016-07-29T06:36:16.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2016-07-29T06:36:16.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
 </urlset>

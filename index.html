@@ -251,59 +251,6 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-kljklkj" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/29/kljklkj/" class="article-date">
-      <time datetime="2016-07-29T07:13:27.000Z" itemprop="datePublished">2016-07-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/29/kljklkj/">kljklkj</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
     <article id="post-iOS进阶之路" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -331,68 +278,26 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/29/hello-world/" class="article-date">
-      <time datetime="2016-07-29T06:36:16.000Z" itemprop="datePublished">2016-07-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h1 id="网络数据请求"><a href="#网络数据请求" class="headerlink" title="网络数据请求"></a>网络数据请求</h1><blockquote>
+<p><a href="http://www.baidu.com?city=beijing&amp;weather=" target="_blank" rel="external">http://www.baidu.com?city=beijing&amp;weather=</a><br>    ?前面部分被称为请求头  ？后面的部分被称为请求体<br>    请求体由参数和参数值组成 多个参数之间用&amp;连接</p>
+<ul>
+<li>按照接口划分：<br>如果接口是完整（包括请求头和请求体两部分）<br>  这种数据请求 我们就使用GET方式请求数据<br>  GET方式请求数据非常简单 但是不安全 请求数据的信息都在接口的请求体位置裸露出来 所以不安全<br>  如果接口不完整（只有请求头 没有请求体）<br>  这种数据请求的方式 我们就使用POST方式请求数据<br>  POST方式请求数据 相对来说复杂一些 请求体需要写代码手动拼接<br>  POST请求数据的方式经常用于登录、注册、文件的上传</li>
+<li>按照请求数据的样式划分:<blockquote>
+<ul>
+<li>同步请求:多个请求对象向服务器请求数据 服务器会将多个对象放在队列中 一个对象开始请求数据 其他对象在队列中等待 如果第一个对象请求数据结束以后 第二个对象才能开始请求数据 即使对象请求数据结束也要在队列中等待 等待所有对象全部请求数据完成 服务器才将所有对象请求的数据反馈给UI 所有用户体验非常不好 经常出现白屏获取卡顿 (也就是影响了UI主线程的工作)</li>
+<li>异步请求:多个对象请求数据 也是将多个对象放在队列中 多个对象同时请求数据 谁先请求数据完成 就将数据反馈给UI 无需等待其他对象完成数据请求<br>iOS开发中用到的数据请求都是异步请求 异步请求能够提高CPU的利用率</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p>真正开发中和数据有关的就是下面的4步</p>
+<ul>
+<li>数据请求</li>
+<li>将请求下来的数据进行解析</li>
+<li>将解析好的数据显示在UI上</li>
+<li>将UI上的数据进行持久性存储</li>
+</ul>
+</blockquote>
 
       
     </div>
